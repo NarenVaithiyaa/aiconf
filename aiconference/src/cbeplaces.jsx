@@ -1,23 +1,34 @@
 import React, { useEffect, useRef, useState } from "react";
+import grd from './assets/grd.jpg';
+import marudhamalai from './assets/marudhamalai.png';
+import isha from './assets/isha.png';
+import gass from './assets/gass.png';
+import gd from './assets/gd.png';
+import ilovekovai from './assets/ilovekovai.jpg';
+import thiruvalluvar from './assets/thiruvalluvar.jpg';
+import boat from './assets/boat.jpg';
+import perur from './assets/perur.jpg';
+import ooty from './assets/ooty.jpg';
+import falls from './assets/falls.jpg';
 
 const WelcomeCardSection = () => {
   const scrollRef = useRef(null);
   const animationRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
-  const speedRef = useRef(0.5); // Lower value for smoother motion
+  const speedRef = useRef(2); // Increased value for faster scrolling
 
   const images = [
-    { name: "PSG GRD Museum", img: "/images/grd.jpg" },
-    { name: "Marudhamalai Temple", img: "/images/marudhamalai.png" },
-    { name: "Brookefields Mall", img: "/images/brookefields.png" },
-    { name: "Isha Yoga Center", img: "/images/isha.png" },
-    { name: "Gass Forest Museum", img: "/images/gass.png" },
-    { name: "Prozone Mall", img: "/images/prozone.png" },
-    { name: "GD Car Museum", img: "/images/gd.png" },
-    { name: "Ukkadam Lake Spot", img: "/images/ilovekovai.jpg" },
-    { name: "Thiruvalluvar Statue", img: "/images/thiruvalluvar.jpg" },
-    { name: "Clock Tower", img: "/images/town.jpg" },
-    { name: "Vallankulam Boat House", img:"/images/boat.jpg"}
+    { name: "PSG GRD Museum", img: grd },
+    { name: "Marudhamalai Temple", img: marudhamalai },
+    { name: "Isha Yoga Center", img: isha },
+    { name: "Gass Forest Museum", img: gass },
+    { name: "GD Car Museum", img: gd },
+    { name: "Ukkadam Lake Spot", img: ilovekovai },
+    { name: "Thiruvalluvar Statue", img: thiruvalluvar },
+    { name: "Vallankulam Boat House", img: boat },
+    { name: "Perur Temple", img: perur },
+    { name: "Ooty", img: ooty },
+    { name: "Courtallam Falls", img: falls }
   ];
 
   const repeatedImages = [...images, ...images]; // Duplicate for seamless scroll
